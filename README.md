@@ -11,10 +11,10 @@ Wildcards are supported.
 Simply ask the matcher if a routing key matches a pattern:
 
 ```ruby
-> AmqpTopicBinding.new('foo.bar.*').matches?('foo.bar.baz')
+> AmqpTopicBinding::Matcher.new('foo.bar.*').matches?('foo.bar.baz')
 => true
-> AmqpTopicBinding.new('foo.bar.*').matches?('foo.bar')
+> AmqpTopicBinding::Matcher.new('foo.bar.*').matches?('foo.bar')
 => false
-> AmqpTopicBinding.new('foo.#').matches?('foo.bar.baz')
+> AmqpTopicBinding::Matcher.new('foo.#').matches?('foo.bar.baz')
 => true
 ```
