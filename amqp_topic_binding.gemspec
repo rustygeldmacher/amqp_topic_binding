@@ -5,6 +5,7 @@ require 'amqp_topic_binding/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "amqp_topic_binding"
+  spec.licenses      = ['MIT']
   spec.version       = AmqpTopicBinding::VERSION
   spec.authors       = ["Rusty Geldmacher"]
   spec.email         = ["russell.geldmacher@gmail.com"]
@@ -18,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.10"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake", ">= 12.3.3"
   spec.add_development_dependency "rspec"
 end
